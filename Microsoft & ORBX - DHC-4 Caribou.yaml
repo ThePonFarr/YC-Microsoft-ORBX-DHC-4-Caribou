@@ -1,0 +1,318 @@
+# Version 1.0
+
+include:
+  - definitions/modules/Instruments/AS_GNS530.yaml
+  - definitions/modules/Instruments/PMS50_GTN.yaml
+  - definitions/modules/controls.yaml
+  - definitions/modules/deice.yaml
+  - definitions/modules/electrical.yaml
+  - definitions/modules/engines.yaml
+  - definitions/modules/fuel.yaml
+  - definitions/modules/general.yaml
+  - definitions/modules/handling.yaml
+  - definitions/modules/lights.yaml
+  - definitions/modules/navigation.yaml
+  - definitions/modules/radios.yaml
+  - definitions/modules/safety.yaml
+  - definitions/modules/transponder.yaml
+  - definitions/modules/trim.yaml
+  - definitions/modules/commonlvars.yaml
+  - definitions/modules/autopilot.yaml
+
+shared:
+  - # LVAR's'
+     type: var
+     var_name: L:MS_DHC4_ENGINE_Oil_Dilution_Left
+  - 
+     type: var
+     var_name: L:MS_DHC4_ENGINE_Oil_Dilution_Right
+  - 
+     type: var
+     var_name: L:MS_DHC4_ENGINE_Prime_Switch
+  - 
+     type: var
+     var_name: L:MS_DHC4_AIR_Oxygen_Supply_1
+  - 
+     type: var
+     var_name: L:MS_DHC4_ENGINE_Start_Master
+  - 
+     type: var
+     var_name: L:MS_DHC4_GEAR_Horn_Test
+  - 
+     type: var
+     var_name: L:MS_DHC4_MISC_StallWarningTest
+  - 
+     type: var
+     var_name: L:MS_DHC4_MISC_Radio_Altimeter_DH
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_CDI_ILS
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_CDI_NAVGPS_1
+  - 
+     type: var
+     var_name: L:INSTRUMENT_Course_1
+  - 
+     type: var
+     var_name: L:MS_DHC4_HSI_VORADF
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_HSI_NAVGPS_1
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_HSI_VOR
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_HSI_FREESLAVE
+  - 
+     type: var
+     var_name: L:DEICE_Propeller_1
+  - 
+     type: var
+     var_name: L:MS_DHC4_DEICE_WingTail_Switch
+  - 
+     type: var
+     var_name: L:MS_DHC4_DEICE_WingTail_Speed
+  - 
+     type: var
+     var_name: L:MS_DHC4_DEICE_Boots_Inbd
+  - 
+     type: var
+     var_name: L:MS_DHC4_DEICE_Boots_Outbd
+  - 
+     type: var
+     var_name: L:MS_DHC4_DEICE_Boots_Tail
+  - 
+     type: var
+     var_name: L:MS_DHC4_FUEL_Selector
+  - 
+     type: var
+     var_name: L:MS_DHC4_FUEL_Pump_1
+  - 
+     type: var
+     var_name: L:MS_DHC4_FUEL_Pump_2
+  - 
+     type: var
+     var_name: L:MS_DHC4_ENGINE_FeatherSwitch_1
+  - 
+     type: var
+     var_name: L:MS_DHC4_ENGINE_FeatherSwitch_2
+  - 
+     type: var
+     var_name: L:MS_DHC4_Cover_SWITCH_COVER_FuelCutOff_Left
+  - 
+     type: var
+     var_name: L:MS_DHC4_Cover_SWITCH_COVER_FuelCutOff_Right
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_GPS_Brightness
+  - 
+     type: var
+     var_name: L:MS_DHC4_Cover_SWITCH_COVER_DC_Left
+  - 
+     type: var
+     var_name: L:MS_DHC4_Cover_SWITCH_COVER_DC_Right
+  - 
+     type: var
+     var_name: L:MS_DHC4_ELECTRICAL_AC_Inverter
+  - 
+     type: var
+     var_name: L:MS_DHC4_LIGHTING_Warning_Light_Intensity
+  - 
+     type: var
+     var_name: L:MS_DHC4_LIGHTING_Standby_Compass
+  - 
+     type: var
+     var_name: L:MS_DHC4_MISC_TroopJumpLights
+  - 
+     type: var
+     var_name: L:MS_DHC4_MISC_TroopJumpLights_Brightness
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_CDI_NAVGPS_2
+  - 
+     type: var
+     var_name: L:MS_DHC4_AIR_Oxygen_Supply_2
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_ADF_BFO_1
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_ADF_BFO_2
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_ADF_MODE_1
+  - 
+     type: var
+     var_name: L:MS_DHC4_NAVCOM_ADF_MODE_2
+  - 
+     type: var
+     var_name: L:MS_DHC4_ENGINE_GustLock
+  - 
+     type: var
+     var_name: L:MS_DHC4_LIGHTING_Landing_Left_NVR
+  - 
+     type: var
+     var_name: L:MS_DHC4_LIGHTING_Landing_Right_NVR
+  - 
+     type: var
+     var_name: L:MS_DHC4_LIGHTING_Taxi_NVR
+  - 
+     type: var
+     var_name: L:MS_DHC4_Cover_SWITCH_COVER_CabinLights
+  - 
+     type: var
+     var_name: L:MS_DHC4_DOOR_CargoDoorMaster
+  - 
+     type: var
+     var_name: L:MS_DHC4_Cover_SWITCH_COVER_Ramp
+  - 
+     type: var
+     var_name: L:MS_DHC4_DOOR_RampMovement
+  - 
+     type: var
+     var_name: L:MS_DHC4_DOOR_CargoDoorMaster
+  - 
+     type: var
+     var_name: L:MS_DHC4_Cover_SWITCH_COVER_RampDown
+  - 
+     type: var
+     var_name: L:MS_DHC4_DOOR_RampOverride
+  - 
+     type: var
+     var_name: L:MS_DHC4_DOOR_State_CockpitDoor
+  - 
+     type: var
+     var_name: L:MS_DHC4_DOOR_CargoDoorMovement
+  - 
+     type: var
+     var_name: L:MS_DHC4_AIR_CabinTemperature
+  - 
+     type: var
+     var_name: L:MS_DHC4_AIR_CabinMasterSwitch
+  - 
+     type: var
+     var_name: L:MS_DHC4_AIR_CabinRunning
+  - 
+     type: var
+     var_name: L:MS_DHC4_AIR_CockpitTemperature
+  - 
+     type: var
+     var_name: L:MS_DHC4_FUEL_Pump_1
+  - 
+     type: var
+     var_name: L:MS_DHC4_AIR_CockpitRunning
+  - 
+     type: var
+     var_name: L:MS_DHC4_AIR_CockpitMasterSwitch
+  - 
+     type: var
+     var_name: L:MS_DHC4_AIR_CockpitMasterSwitch
+
+  - # AVAR's'
+    type: ToggleSwitch
+    var_name: A:FUELSYSTEM VALVE SWITCH:4
+    var_units: Bool
+    var_type: bool
+    event_name: FUELSYSTEM_VALVE_OPEN
+    off_event_name: FUELSYSTEM_VALVE_CLOSE
+    event_param: 4
+  - 
+    type: ToggleSwitch
+    var_name: A:FUELSYSTEM VALVE SWITCH:5
+    var_units: Bool
+    var_type: bool
+    event_name: FUELSYSTEM_VALVE_OPEN
+    off_event_name: FUELSYSTEM_VALVE_CLOSE
+    event_param: 5
+  -
+    type: NumSet
+    var_name: A:LIGHT POTENTIOMETER:4
+    var_units: Percent
+    var_type: f64
+    event_name: LIGHT_POTENTIOMETER_SET
+    event_param: 4
+    index_reversed: true
+  -
+    type: NumSet
+    var_name: A:LIGHT POTENTIOMETER:5
+    var_units: Percent
+    var_type: f64
+    event_name: LIGHT_POTENTIOMETER_SET
+    event_param: 5
+    index_reversed: true
+  -
+    type: NumSet
+    var_name: A:LIGHT POTENTIOMETER:6
+    var_units: Percent
+    var_type: f64
+    event_name: LIGHT_POTENTIOMETER_SET
+    event_param: 6
+    index_reversed: true
+  -
+    type: NumSet
+    var_name: A:LIGHT POTENTIOMETER:7
+    var_units: Percent
+    var_type: f64
+    event_name: LIGHT_POTENTIOMETER_SET
+    event_param: 7
+    index_reversed: true
+  -
+    type: NumSet
+    var_name: A:LIGHT LANDING:2
+    var_units: Bool
+    var_type: f64
+    event_name: LANDING_LIGHTS_SET
+    event_param: 2
+  -
+    type: ToggleSwitch
+    var_name: A:CABIN NO SMOKING ALERT SWITCH
+    var_units: Bool
+    var_type: bool
+    event_name: CABIN_NO_SMOKING_ALERT_SWITCH_TOGGLE
+
+
+server:
+  -
+    type: var
+    var_name: A:FUEL TANK LEFT MAIN LEVEL
+    var_units: Percent
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:FUEL TANK RIGHT MAIN LEVEL
+    var_units: Percent
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:1
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:2
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:3
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:4
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
+  -
+    type: var
+    var_name: A:PAYLOAD STATION WEIGHT:5
+    var_units: Pounds
+    var_type: f64
+    unreliable: true
