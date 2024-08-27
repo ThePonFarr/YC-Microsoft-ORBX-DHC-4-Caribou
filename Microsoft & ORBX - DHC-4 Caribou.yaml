@@ -206,9 +206,6 @@ shared:
   - 
      type: var
      var_name: L:MS_DHC4_AIR_CockpitMasterSwitch
-  - 
-     type: var
-     var_name: L:MS_DHC4_AIR_CockpitMasterSwitch
 
   - # AVAR's'
     type: ToggleSwitch
